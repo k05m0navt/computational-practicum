@@ -1,3 +1,4 @@
-import HomeBody from "./HomeBody";
+import HomeBody from './HomeBody';
+import ErrorBody from './ErrorBody';
 
-export { HomeBody };
+export { HomeBody, ErrorBody };

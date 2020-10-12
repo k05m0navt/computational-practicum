@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { NavBar } from "../../molecules";
+import { NavBar, SideBar } from "../../molecules";
 import { HomeBody } from "../../organisms";
-import { SideBar } from "../../molecules";
 import "../../styles/HomePage/styles.css";
 
 function HomePage(props) {

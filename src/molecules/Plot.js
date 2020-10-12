@@ -13,7 +13,7 @@ function Plot(props) {
     return (
         <div className="plot">
             <h2>{props.title}</h2>
-            <LineChart width={1200} height={330} data={props.data}>
+            <LineChart width={props.width} height={props.height} data={props.data}>
                 <XAxis />
                 <YAxis />
                 <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
