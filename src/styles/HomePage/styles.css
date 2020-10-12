@@ -1,0 +1,5 @@
+.home_content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3.2%;
+}

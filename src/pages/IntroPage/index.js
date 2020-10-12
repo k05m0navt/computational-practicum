@@ -1,3 +1,3 @@
-import IntroPage from './IntroPage';
+import IntroPage from "./IntroPage";
 
 export { IntroPage };
