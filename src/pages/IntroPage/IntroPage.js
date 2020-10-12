@@ -7,7 +7,7 @@ function IntroPage(props) {
         <div className="intro_page">
             <h1>Computational Practicum</h1>
             <ButtonForRoute
-                to="/home"
+                to="/plots"
                 text="Start solving"
                 buttonClass="btn btn-outline-dark"
             />

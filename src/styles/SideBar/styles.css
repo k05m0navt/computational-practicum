@@ -1,8 +1,14 @@
 .side_bar {
     width: 100%;
-    border-left: 2mm ridge #343a40;
+    background-color:  #757575;
+    padding-bottom: 41.2%;
+    margin-left: 4%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .side_bar h2 {
-    margin-left: 35%;
+    padding-left: 37%;
+    padding-top: 3%;
+    color: #ececec;
+    font-weight: bold;
 }
