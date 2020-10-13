@@ -13,7 +13,7 @@ function HomePage(props) {
         <div className="home_page">
             <NavBar
                 logo="Comp Prac"
-                homeLink="#home"
+                homeLink="/plots"
                 homeText="Plots"
                 errorLink="/max_error"
                 errorText="Max error"

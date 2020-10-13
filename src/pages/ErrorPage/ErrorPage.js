@@ -15,7 +15,7 @@ function ErrorPage() {
                 logo="Comp Prac"
                 homeLink="/plots"
                 homeText="Plots"
-                errorLink="#max_error"
+                errorLink="/max_error"
                 errorText="Max error"
             />
             <div className="error_content">

@@ -1,3 +1,4 @@
 import ButtonForRoute from "./ButtonForRoute";
+import InputWithHeader from './InputWithHeader';
 
-export { ButtonForRoute };
+export { ButtonForRoute, InputWithHeader };

@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import '../styles/NavBar/styles.css';
+import "../styles/NavBar/styles.css";
 
 function NavBar(props) {
     return (
@@ -8,7 +8,7 @@ function NavBar(props) {
             <Navbar
                 collapseOnSelect
                 expand="lg"
-                className='color_nav'
+                className="color_nav"
                 variant="dark"
                 fixed="top"
             >
