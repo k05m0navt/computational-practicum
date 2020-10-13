@@ -3,14 +3,14 @@ import "../styles/InputWithHeader/styles.css";
 
 function InputWithHeader(props) {
     return (
-        <div class="input-group input-group-sm mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">
+        <div className="input-group input-group-sm mb-3">
+            <div className="input-group-prepend">
+                <span className="input-group-text" id="inputGroup-sizing-sm">
                     {props.title}
                 </span>
             </div>
             <input
-                class="form-control"
+                className="form-control"
                 aria-label={props.title}
                 aria-describedby="inputGroup-sizing-sm"
                 type="text"
