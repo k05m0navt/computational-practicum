@@ -9,21 +9,16 @@ import {
 } from "../../mathFunc";
 import "../../styles/HomePage/styles.css";
 
-function GenerateData(setData, x0, y0, X, N) {
+function GenerateData(setData, setError, x0, y0, X, N) {
     var h = (X - x0) / N;
     var c1 = (1 / (Math.sqrt(x0) + Math.sqrt(y0 - x0))) ** 2;
-    console.log(
-        "c1: %f, sqrt(x): %f, sqrt(y-x): %f",
-        c1,
-        Math.sqrt(x0),
-        Math.sqrt(y0 - x0)
-    );
     var y_sol = y0;
     var y_em = y0;
     var y_iem = y0;
     var y_rkm = y0;
     var x = x0;
     var newData = [];
+    var newError = [];
 
     for (var i = 0; i < N; i++) {
         y_em = EulerMethod(x, y_em, h);
@@ -43,8 +38,16 @@ function GenerateData(setData, x0, y0, X, N) {
             rkm: y_rkm,
             sol: y_sol,
         });
+        newError.push({
+            x: Math.round(x * 1000) / 1000,
+            em: Math.abs(y_em - y_sol),
+            iem: Math.abs(y_iem - y_sol),
+            rkm: Math.abs(y_rkm - y_sol),
+            sol: 0,
+        });
     }
     newData.map((el) => setData((oldArray) => [...oldArray, el]));
+    newError.map((el) => setError((oldArray) => [...oldArray, el]));
 }
 
 function HomePage(props) {
@@ -56,9 +59,13 @@ function HomePage(props) {
     const [data, setData] = useState([
         { x: x0, em: y0, iem: y0, rkm: y0, sol: y0 },
     ]);
+    const [error, setError] = useState([
+        { x: x0, em: 0, iem: 0, rkm: 0, sol: 0 },
+    ]);
     useEffect(() => {
         setData([{ x: x0, em: y0, iem: y0, rkm: y0, sol: y0 }]);
-        GenerateData(setData, x0, y0, X, N);
+        setError([{ x: x0, em: 0, iem: 0, rkm: 0, sol: 0 }])
+        GenerateData(setData, setError, x0, y0, X, N);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [click]);
 
@@ -74,6 +81,7 @@ function HomePage(props) {
             <div className='home_content'>
                 <HomeBody
                     data={data}
+                    error={error}
                     axisX='x'
                     firstDataKey='em'
                     secondDataKey='iem'

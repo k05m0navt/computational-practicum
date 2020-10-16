@@ -20,12 +20,12 @@ function HomeBody(props) {
                 title='Error'
                 width={1200}
                 height={330}
-                data={props.data}
+                data={props.error}
                 axisX={props.axisX}
                 firstDataKey={props.firstDataKey}
                 secondDataKey={props.secondDataKey}
                 thirdDataKey={props.thirdDataKey}
-                dataKey={props.fourthDataKey}
+                fourthDataKey={props.fourthDataKey}
             />
         </div>
     );
