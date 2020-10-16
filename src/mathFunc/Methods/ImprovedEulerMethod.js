@@ -16,14 +16,11 @@ function correct(x, y, x1, y1, h) {
     return y1c;
 }
 
-function ImprovedEulerMethod(x0, X, y0, h) {
-    while (x0 < X) {
-        let x1 = x0 + h;
-        let y1p = predict(x0, y0, h);
-        let y1c = correct(x0, y0, x1, y1p, h);
-        x0 = x1;
-        y0 = y1c;
-    }
+function ImprovedEulerMethod(x0, y0, h) {
+    let x1 = x0 + h;
+    let y1p = predict(x0, y0, h);
+    let y1c = correct(x0, y0, x1, y1p, h);
+    y0 = y1c;
 
     return y0;
 }

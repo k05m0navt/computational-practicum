@@ -7,8 +7,14 @@
 }
 
 .side_bar h2 {
-    padding-left: 37%;
+    display: flex;
+    justify-content: center;
     padding-top: 3%;
     color: #ececec;
     font-weight: bold;
+}
+
+.button {
+    justify-content: center;
+    display: flex;  
 }

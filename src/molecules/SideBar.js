@@ -1,5 +1,5 @@
 import React from "react";
-import { InputWithHeader } from "../atoms";
+import { InputWithHeader, Button } from "../atoms";
 import "../styles/SideBar/styles.css";
 
 function SideBar(props) {
@@ -26,6 +26,13 @@ function SideBar(props) {
                 value={props.N}
                 setValue={props.setN}
             />
+            <div className="button">
+                <Button
+                    text="Draw graph"
+                    buttonClass="btn btn-outline-light"
+                    setClick={props.setClick}
+                />
+            </div>
         </div>
     );
 }
